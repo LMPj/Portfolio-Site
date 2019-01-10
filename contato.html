@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Contato LMPJ</title>
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" 
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+      <script src="js/jquery.backgroundMove.js"></script>
+      <script src="js/btnstyle.js"></script>
+   </head>
+   <body>
+      <div id="menu">
+         <ul>
+               <li><a href="index.html">Inicio</a></li>
+           <li><a href="https://bit.ly/2C4WixZ" target="_blank">Trabalhos</a></li>
+           <li><a href="sobre.html">Sobre Mim</a></li>
+           <li><a href="contato.html">Contato</a></li>
+         </ul>
+       </div>
+       <div id="btn-sd" onclick="toggleSidebar(this)">
+         <span></span>
+         <span></span>
+         <span></span>
+       </div> 
+      <section class="header-site">
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-12">
+                    <h1 class="text-center">LMPJ</h1>
+               </div>
+            </div>
+         </div>
+         <div class="contato">
+             <form id="contact-form" method="post" action="formulario.php">
+                 <input type="text" class="form-control"  name="name" placeholder="Nome" />
+                 <input type="mail" class="form-control" name="mail" placeholder="Email" />
+                 <input type="text" class="form-control" name="message" placeholder="Mensagem" />
+                 <button type="submit" name="submit" class="form-control button">Enviar</button>
+             </form>
+             
+         </div>
+         <script type="text/JavaScript">
+            $('.header-site').backgroundMove({
+               movementStrength:'50'
+            });
+         </script>
+      </section>
+      
+      <section class="footer-site">
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-12">
+                  <p class="text-center">Copyright © 2019 LMPJ - Todos os direitos reservados.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/bootstrap.min.js"></script>
+   </body>
+</html>

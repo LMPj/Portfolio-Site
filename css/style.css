@@ -1,0 +1,282 @@
+/* 
+ * By LMPJ - LAURO MANOEL PIRES JUNIOR (lauroindcontato@gmail.com)
+ * License MIT
+ * This and other projects you can see at : https://bit.ly/2C4WixZ 
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Tangerine');
+
+
+/*Profile*/
+.hudprofile {
+    position: absolute;
+    top:-35%;
+    left:50.5%;
+    transform: translate(-50%, -50%);
+    width:200px;
+    height:200px;
+    overflow:hidden;
+}
+.hudprofile img{
+    width:152px;
+    border-radius: 50%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.hudprofile svg {
+    fill:none;
+    stroke:#be2b67;
+    stroke-width: 3px;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 0;
+    stroke-linecap:round;
+    animation:loading 4500ms ease-in-out infinite alternate;
+}
+@keyframes loading{
+    100%{
+        stroke:#de6c3e;
+        stroke-dasharray: 10;
+        transform: rotate(250deg);
+    }
+}
+/*end*/
+
+/*Social Media*/
+#media {
+    position: absolute;
+    left: 50%;
+    width: auto;
+    height: 950px;
+    
+  }
+
+#media ul  {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50.5%;
+    transform: translate(-50%, -50%);
+    
+}
+
+#media ul li{
+    list-style: none;
+}
+
+#media ul li a{
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    text-align: center;
+    line-height: 80px;
+    font-size: 35px;
+    margin: 0 25px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+}
+
+#media ul li a .fa{
+    position: relative;
+    color: #262626;
+    transition: .5s;
+}
+#media ul li a:hover .fa{
+    color: #fff;
+    transform: rotateY(360deg);
+}
+#media ul li a:before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: .5s;
+    z-index: 2;
+}
+#media ul li a:hover:before{
+    top: 0;
+}
+#mediaul li:nth-child(1) a:before{
+    background: #e4405f;
+}
+#media ul li:nth-child(2) a:before{
+    background: #55acee;
+}
+#media ul li:nth-child(3) a:before{
+    background: #282828;
+}
+
+
+/*end*/
+
+/*Menu lateral*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+}
+
+#menu {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 100vh;
+    background: #1a1a1a;
+    text-align: center;
+    transform-origin: left;
+    transform: perspective(1200px) rotateY(90deg);
+    transition: all 400ms ease;
+    z-index: 4;
+}
+
+#menu ul {
+    margin-top: 50px;
+}
+
+#menu ul li {
+    color: #ccc;
+    font-size: 20px;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #222222;
+    line-height: 50px;
+}
+
+#menu.active{
+    transform: perspective(1200px);
+}
+ 
+#btn-sd {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    transition: left 200ms linear 0ms, transform 300ms ease 100ms;
+}
+#btn-sd.active{
+    left:230px;
+    transform: rotate(360deg);
+    
+}
+#btn-sd span{
+    position: relative;
+    top: 0px;
+    display: block;
+    background: #1a1a1a;
+    width: 30px;
+    height: 5px;
+    margin: 5px 0px;
+    cursor: pointer;
+    transition: transform 300ms ease 200ms;
+}
+#btn-sd.active span:nth-child(1){
+    top:10px;
+    transform:rotate(45deg);
+}
+#btn-sd.active span:nth-child(2){
+    opacity:0;
+}
+#btn-sd.active span:nth-child(3){
+    top:-10px;
+    transform:rotate(-45deg);
+}
+/*end*/
+
+.header-site { 
+    background-image: url(../img/background.png);
+    background-repeat: no-repeat;
+    background-size: 2000px;
+    background-attachment: fixed;
+    color: #ffffff;
+    padding-top: 300px;
+    padding-bottom: 524px;
+    display: flex;
+}
+
+
+.header-site h1{
+    font-family: 'Quicksand', cursive;
+    font-size: 100px;
+    color: #333333;
+    margin-top: 25px;
+    margin-left: -2px;
+
+}
+
+.header-site h2{
+    font-family: 'Karla', sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+    margin-top: 25px;
+    margin-left: 25px;
+
+}
+
+.footer-site {
+    background-color: #333333;
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*Contact form*/
+.contato{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    text-align: center;
+}
+
+.form-control{
+    width: 600px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    color: #fff;
+    font-size: 16px;
+    border-bottom: 1px solid #333333;
+}
+
+
+
+input{
+    width: 100%;
+    margin: 20px 0;
+}
+
+form .button {
+
+    font-size: 16px;
+    background: #333333;
+    border: none;
+    border-radius: 20px;
+    margin-top: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+form .button:hover{
+    background-color: #ff4444;
+    cursor: pointer;   
+}
+
+
+
+
+
+
+
+
+
+
+
